@@ -52,20 +52,12 @@
    "mobile1":"Mobile1:",
    "mobile2":"Mobile2:",
    "dal":"Daliluna is a website and an application that includes all public authorities in addition to all commercial, tourist, services, and industrial establishments that are of importance to the citizens. It aims to make it easier for them to contact with these establishments via all possible ways which save time and money like providing information about the locations, phone numbers, and emails. It is noteworthy to mention that Daliluna does not get paid for any of these services: . Inserting information about an establishment. . Downloading the app of Daliluna . . Posting on the social media platforms related to the website. . Using the (Classifieds) of the online market which the website provides to display products, goods, real-estates, vehicles, and other things for the sake of selling, exchanging, or giving for free. Daliluna refuses to get involved in the following issues: . Religious and political issues. . Defamation of public figures, individuals of the community, establishments, authorities, resorts, and services. . Indecent and controversial topics. Disclaimer: Daliluna is not responsible for the credibility of the included information such as quality information, scientific information, cultural information etc... Only the person inserting those information is responsible for them.",
-   "contentUs": "Contact Us",
-    "help": "How can we help you?",
-    "name":"Name",
-    "email":"Email",
-    "subject":"Subject",
-    "write":"write a message",
-    "submit":"Submit",
-     "login":"Login",
-    "enter":"Please Enter your Details",
-    "email":"Enter your email",
-    "password":"Enter your password",
+    "basic":"Basic & Location information",
+    "submit":"submit",
+    "media":"Media Information",
     "add":"add new post",
-    "personal":"Personal Information",
-    "detail":"post details"
+    "post":"post information",
+    "name":"name"
 }
 
   

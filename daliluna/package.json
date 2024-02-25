@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy":"npm run dev",
+    "deploy":"gh-pages -d build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "homepage":"http://yaSMin9N9.github.io/daliluna",
     "axios": "^1.6.5",
     "bootstrap": "^5.3.2",
     "firebase": "^10.8.0",

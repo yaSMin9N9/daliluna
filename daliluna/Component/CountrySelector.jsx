@@ -16,7 +16,7 @@ const CountrySelector = () => {
         const response = await axios.get('https://daliluna.ltd/api/main-countries', {
           headers: {
             'Accept': 'application/json',
-            'Accept-Language': 'en',
+            'Accept-Language': localStorage.getItem("lan"),
             'country': 'SY'
           }
         });

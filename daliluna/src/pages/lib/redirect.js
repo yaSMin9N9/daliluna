@@ -6,10 +6,10 @@ import { useEffect } from 'react'
     const router = useRouter()
     to = to || router.asPath
 
-    // language detection
+
     useEffect(() => {
       const detectedLng = languageDetector.detect()
-      if (to.startsWith('/' + detectedLng) && router.route === '/404') { // prevent endless loop
+      if (to.startsWith('/' + detectedLng) && router.route === '/404') { 
         router.replace('/' + detectedLng + router.route)
         return
       }
@@ -26,8 +26,15 @@ import { useEffect } from 'react'
     return <></>
   }
 
-  // eslint-disable-next-line react/display-name
   export const getRedirect = (to) => () => {
     useRedirect(to)
     return <></>
   }
+
+  const MyPage = () => {
+    // Your page content here
+    return <div>Hello, this is my page!</div>;
+  };
+  
+  export default MyPage;
+  

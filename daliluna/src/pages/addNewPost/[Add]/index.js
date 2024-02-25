@@ -6,8 +6,9 @@ import { GoDotFill } from "react-icons/go";
 import style from "./add.module.css"
 import LanguageContext from '../../../../context/languageContext';
 import index from '@/pages/AboutUs';
-
+import useTranslation from 'next-translate/useTranslation'
 function NewPost() {
+  const { t } = useTranslation('common');
   const router = useRouter();
   const { Add } = router.query;
   const [data, setData] = useState([]);
@@ -50,7 +51,7 @@ function NewPost() {
           {
             headers: {
               'Accept': 'application/json',
-              'Accept-Language': "en",
+              'Accept-Language': localStorage.getItem("lan"),
               'country': 'SY'
             },
           }
@@ -170,7 +171,7 @@ function NewPost() {
          paddingLeft: "calc(var(--bs-gutter-x) * .5)"}}>
         <div className="row align-items-center text-center">
           <div className="col-md-12 col-12">
-            <h2 className="breadcrumb-title" style={{color:"white"}}>Add new post</h2>
+            <h2 className="breadcrumb-title" style={{color:"white"}}>{t("add")}</h2>
             <nav aria-label="breadcrumb" className="page-breadcrumb">
               
             </nav>
@@ -185,21 +186,20 @@ function NewPost() {
           <div className={style["messages-form"]}>
           <div className={style["card"]}>
               <div className="card-header">
-                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />Personal Information</h3>
+                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />{t("personal")}</h3>
               </div>
               <div className="card-body">
                 <div className="form-group">
-                  <label className={style["col-form-label"]}>Name</label>
-                  <input type="text" className="form-control pass-input" placeholder="your name" name='name' value={name} onChange={(e)=>{setName(e.target.value)}} />
+                  <label className={style["col-form-label"]}>{t("name")}</label>
+                  <input type="text" className="form-control pass-input"  name='name' value={name} onChange={(e)=>{setName(e.target.value)}} />
                 </div>
 
                 <div className="row">
                   <div className="col-lg-6 col-md-6">
                     <div className="form-group formlast-input">
-                      <label className={style["col-form-label"]}  >mobile 1</label>
+                      <label className={style["col-form-label"]}  >{t("mobile1")}</label>
                       <input  type="text"
   className="form-control select"
-  placeholder="mobile 1"
   id="mobile1"
   name="mobile1"
   value={mobile1}
@@ -209,10 +209,9 @@ function NewPost() {
                   </div>
                   <div className="col-lg-6 col-md-6" style={{marginBottom:"20px"}}>
                   <div className="form-group formlast-input">
-                      <label className={style["col-form-label"]}>mobile 2</label>
+                      <label className={style["col-form-label"]}>{t("mobile1")}</label>
                       <input type="text"
   className="form-control select"
-  placeholder="mobile 2"
   id="mobile2"
   name="mobile2"
   value={mobile2}
@@ -222,8 +221,8 @@ function NewPost() {
                   </div>
                 </div>
                 <div className="form-group">
-                  <label className={style["col-form-label"]}>Email</label>
-                  <input type="text" className="form-control pass-input" placeholder="your Email"
+                  <label className={style["col-form-label"]}>{t("email")}</label>
+                  <input type="text" className="form-control pass-input" 
                   name='Email' value={email} onChange={(e)=>{setEmail(e.target.value)}}  />
               
                 </div>
@@ -238,8 +237,8 @@ function NewPost() {
                     </div>
                   <div className="col-lg-6 col-md-6" style={{marginBottom:"20px"}}>
                   <div className="form-group formlast-input">
-                      <label className={style["col-form-label"]}>Address</label>
-                      <input type="text" className="form-control select" placeholder="Address"
+                      <label className={style["col-form-label"]}>{t("address")}</label>
+                      <input type="text" className="form-control select"
                        name='Address' value={address} onChange={(e)=>{setAddress(e.target.value)}} />
                     </div>
                   </div>
@@ -248,7 +247,7 @@ function NewPost() {
             </div>
             <div className={style["card"]}>
               <div className="card-header">
-                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />Post Information</h3>
+                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />{t("post")}</h3>
               </div>
               <div className="card-body">
          
@@ -280,7 +279,7 @@ function NewPost() {
             </div>
             <div className={style["card"]}>
               <div className="card-header">
-                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />Basic & Location information</h3>
+                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />{t("basic")}</h3>
               </div>
               <div className="card-body">
                 <div className="row">
@@ -309,7 +308,7 @@ function NewPost() {
             </div>
             <div className={style["card"]}>
               <div className="card-header">
-                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />Media Information </h3>
+                <h3 style={{fontWeight:"bolder",marginBottom:"30px",display:"flex",alignItems:"center"}}><FaLocationDot />{t("media")}</h3>
               </div>
               <div className="card-body">
                 <div className="row">
@@ -335,7 +334,7 @@ function NewPost() {
     </div>
   </div>
   <div className="progress-wrap active-progress" style={{display:"flex",justifyContent:"flex-end",margin:"50px"}}>
-  <button class={style["button-30"]} onClick={handleButtonClick} role="button">Submit</button>
+  <button class={style["button-30"]} onClick={handleButtonClick} role="button">{t("submit")}</button>
 
   </div></div>
 

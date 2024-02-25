@@ -17,23 +17,6 @@ function YellowCard({det}) {
       <div className="blog-img">
            
            <Image  src={im} alt="icons" className={style['imm']} style={{position:"relative",borderRadius:"0px 5px 5px 0"}} loading="lazy"/>
-         {
-         /*    
-            localStorage.getItem("lan") === "ar" ?( <>
-              <h6 style={{position:"absolute",top:"20px",marginRight:"20px",backgroundColor:"#2b294e",color:"#fff",padding:"10px",borderRadius:"10px"}}>{t("feature")}</h6>
-              <div style={{position:"absolute",top:"20px",marginRight:"230px",backgroundColor:"#fff",color:"2b294e",padding:"10px ",borderRadius:"50%"}}>
-              <CiHeart style={{fontSize:"25px"}}/>
-              </div>
-              </>):(
-             <>
-             <h6 style={{position:"absolute",top:"20px",marginLeft:"20px",backgroundColor:"#2b294e",color:"#fff",padding:"10px",borderRadius:"10px"}}>{t("feature")}</h6>
-             <div style={{position:"absolute",top:"20px",marginLeft:"230px",backgroundColor:"#fff",color:"2b294e",padding:"10px ",borderRadius:"50%"}}>
-             <CiHeart style={{fontSize:"25px"}}/>
-             </div>
-             </>
-            )
-           
-              */}
          </div>
  <div className="card-body">
    <div className="blogfeaturelink" style={{display:"flex",justifyContent:"space-between"}}>

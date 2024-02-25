@@ -12,15 +12,14 @@ function CardYe({ yel }) {
     router.push(`/yellowPage/${yel.id}`);
   }, []);
 
-  // State to track if language is Arabic
+  
   const [isArabic, setIsArabic] = useState(false);
 
-  // Effect to set the initial language state
   useEffect(() => {
     setIsArabic(localStorage.getItem("lan") === "ar");
   }, []);
 
-  // Effect to listen for changes in language
+
   useEffect(() => {
     const handleLocalStorageChange = () => {
       setIsArabic(localStorage.getItem("lan") === "ar");
